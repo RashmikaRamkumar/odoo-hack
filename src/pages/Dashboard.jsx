@@ -8,7 +8,7 @@ import {
   Globe,
   Sparkles,
   ArrowRight,
-  DollarSign
+  IndianRupee
 } from 'lucide-react';
 import { useApp } from '../context/AppContext';
 import { popularDestinations } from '../data/mockData';
@@ -37,8 +37,8 @@ const Dashboard = () => {
     },
     { 
       label: 'Total Spent', 
-      value: `$${trips.reduce((sum, t) => sum + (t.budget || 0), 0).toLocaleString()}`, 
-      icon: DollarSign, 
+      value: `₹${trips.reduce((sum, t) => sum + (t.totalBudgetINR || 0), 0).toLocaleString()}`, 
+      icon: IndianRupee, 
       color: 'from-emerald-500 to-teal-500',
       bgColor: 'bg-emerald-50'
     },

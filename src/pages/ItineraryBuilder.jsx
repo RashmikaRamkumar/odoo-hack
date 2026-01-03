@@ -145,12 +145,12 @@ const ItineraryBuilder = () => {
           <div className="card sticky top-8">
             <h3 className="font-display font-bold text-neutral-900 mb-4">Quick Actions</h3>
             <div className="space-y-3">
-              <Link to="/cities" className="btn-secondary w-full justify-center">
-                <MapPin className="w-5 h-5 mr-2" />
-                Browse Cities
+              <Link to="/cities" className="btn-secondary w-full flex items-center justify-center">
+                <MapPin className="w-5 h-5 mr-2 flex-shrink-0" />
+                <span>Browse Cities</span>
               </Link>
-              <Link to={`/trips/${tripId}/budget`} className="btn-secondary w-full justify-center">
-                Budget Overview
+              <Link to={`/trips/${tripId}/budget`} className="btn-secondary w-full flex items-center justify-center">
+                <span>Budget Overview</span>
               </Link>
             </div>
           </div>
