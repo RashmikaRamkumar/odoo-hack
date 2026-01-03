@@ -33,6 +33,7 @@ const SignupPage = () => {
     signup({
       name: `${formData.firstName} ${formData.lastName}`,
       email: formData.email,
+      password: formData.password,
       phone: formData.phone,
       location: `${formData.city}, ${formData.country}`
     });
