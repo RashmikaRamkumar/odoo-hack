@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Search, MapPin, TrendingUp, Filter } from 'lucide-react';
+import { Search, MapPin, TrendingUp, Filter, IndianRupee } from 'lucide-react';
 import { cities } from '../data/mockData';
 
 const CitySearch = () => {
@@ -63,9 +63,12 @@ const CitySearch = () => {
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-1">
                   <TrendingUp className="w-4 h-4 text-yellow-500" />
-                  <span className="text-sm font-medium">Popularity: {city.popularity}</span>
+                  <span className="text-sm font-medium">Popularity: {city.popularity}%</span>
                 </div>
-                <span className="badge-primary">Cost: {city.costIndex}/5</span>
+                <span className="flex items-center space-x-1 badge-primary">
+                  <IndianRupee className="w-4 h-4" />
+                  <span>₹{city.costIndex}</span>
+                </span>
               </div>
               <button className="btn-primary w-full mt-4">Add to Trip</button>
             </div>

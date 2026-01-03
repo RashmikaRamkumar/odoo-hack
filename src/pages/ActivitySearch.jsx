@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Search, Clock, DollarSign } from 'lucide-react';
+import { Search, Clock, IndianRupee } from 'lucide-react';
 import { activities } from '../data/mockData';
 
 const ActivitySearch = () => {
@@ -65,8 +65,8 @@ const ActivitySearch = () => {
                   <span>{activity.duration}h</span>
                 </div>
                 <div className="flex items-center space-x-1 text-neutral-600">
-                  <DollarSign className="w-4 h-4" />
-                  <span>${activity.cost}</span>
+                  <IndianRupee className="w-4 h-4" />
+                  <span>₹{activity.cost}</span>
                 </div>
               </div>
               <button className="btn-primary w-full">Add to Itinerary</button>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft, DollarSign, TrendingUp, PieChart } from 'lucide-react';
+import { ArrowLeft, IndianRupee, TrendingUp, PieChart } from 'lucide-react';
 import { useApp } from '../context/AppContext';
 
 const BudgetView = () => {
@@ -33,14 +33,14 @@ const BudgetView = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div className="card">
-          <DollarSign className="w-8 h-8 text-emerald-600 mb-3" />
+          <IndianRupee className="w-8 h-8 text-emerald-600 mb-3" />
           <h3 className="font-semibold text-neutral-900 mb-1">Total Budget</h3>
-          <p className="text-3xl font-display font-bold text-neutral-900">${total}</p>
+          <p className="text-3xl font-display font-bold text-neutral-900">₹{total.toLocaleString()}</p>
         </div>
         <div className="card">
           <TrendingUp className="w-8 h-8 text-primary-600 mb-3" />
           <h3 className="font-semibold text-neutral-900 mb-1">Daily Average</h3>
-          <p className="text-3xl font-display font-bold text-neutral-900">${Math.round(total / 7)}</p>
+          <p className="text-3xl font-display font-bold text-neutral-900">₹{Math.round(total / 7).toLocaleString()}</p>
         </div>
         <div className="card">
           <PieChart className="w-8 h-8 text-accent-600 mb-3" />
@@ -56,7 +56,7 @@ const BudgetView = () => {
             <div key={category.name}>
               <div className="flex items-center justify-between mb-2">
                 <span className="font-medium text-neutral-900">{category.name}</span>
-                <span className="font-semibold text-neutral-900">${category.amount}</span>
+                <span className="font-semibold text-neutral-900">₹{category.amount.toLocaleString()}</span>
               </div>
               <div className="w-full bg-neutral-200 rounded-full h-3 overflow-hidden">
                 <div
